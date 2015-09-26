@@ -989,6 +989,13 @@ status_t GLConsumer::doGLFenceWaitLocked() const {
     return NO_ERROR;
 }
 
+#ifdef HISILICON_HI3630
+Rect GLConsumer::getCurRefreshDirty() const {
+    Rect dirtyRect;
+    return dirtyRect;
+}
+#endif
+
 #ifdef QCOM_BSP
 Rect GLConsumer::getCurrentDirtyRect() const {
      Mutex::Autolock lock(mMutex);

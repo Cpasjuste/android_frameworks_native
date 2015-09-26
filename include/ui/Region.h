@@ -58,6 +58,9 @@ public:
     
             void        clear();
             void        set(const Rect& r);
+#ifdef HISILICON_HI3630
+            void        set(int w, int h);
+#endif
             void        set(uint32_t w, uint32_t h);
         
             Region&     orSelf(const Rect& rhs);

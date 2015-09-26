@@ -176,6 +176,10 @@ public:
     // getCurrentCrop returns the cropping rectangle of the current buffer.
     Rect getCurrentCrop() const;
 
+#ifdef HISILICON_HI3630
+    Rect getCurRefreshDirty() const;
+#endif
+
 #ifdef QCOM_BSP
     // getDirtyRegion returns the dirty rect associated with the current buffer.
     Rect getCurrentDirtyRect() const;

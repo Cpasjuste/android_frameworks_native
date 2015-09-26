@@ -253,6 +253,14 @@ void Region::set(const Rect& r)
     mStorage.add(r);
 }
 
+#ifdef HISILICON_HI3630
+void Region::set(int w, int h)
+{
+    mStorage.clear();
+    mStorage.add(Rect(w,h));
+}
+#endif
+
 void Region::set(uint32_t w, uint32_t h)
 {
     mStorage.clear();
